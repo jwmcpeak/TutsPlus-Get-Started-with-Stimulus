@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="app.js"></script>
+    <title>Document</title>
+</head>
+<body data-controller="logger">
+
+    <div data-controller="greeter">
+        <input type="text" data-target="greeter.input" data-action="input->logger#log">
+        <button data-action="click->greeter#greet click->logger#log">Greet</button>
+        <p data-target="greeter.output"></p>
+    </div>
+
+
+    <div data-controller="greeter">
+        <textarea type="text" data-target="greeter.input"></textarea> 
+        <a href="#" data-action="click->greeter#greet click->logger#log">Greet</a>
+        <p data-target="greeter.output"></p>
+    </div>
+    <div data-controller="greeter">
+        <input type="text" data-target="greeter.input" data-action="input->greeter#greet input->logger#log">
+        <p data-target="greeter.output"></p>
+    </div>
+</body>
+</html>

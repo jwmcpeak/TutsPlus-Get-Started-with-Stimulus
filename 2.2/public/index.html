@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://unpkg.com/stimulus/dist/stimulus.umd.js"></script>
+    <script src="app.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div data-controller="greeter">
+        <input type="text" data-target="greeter.input">
+        <button data-action="greeter#greet">Greet</button>
+        <p data-target="greeter.output"></p>
+    </div>
+    <div data-controller="greeter">
+        <textarea type="text" data-target="greeter.input"></textarea> 
+        <a href="#" data-action="greeter#greet">Greet</a>
+        <p data-target="greeter.output"></p>
+    </div>
+    <div data-controller="greeter">
+        <input type="text" data-target="greeter.input" data-action="input->greeter#greet">
+        <p data-target="greeter.output"></p>
+    </div>
+</body>
+</html>
